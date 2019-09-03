@@ -1,3 +1,5 @@
+require "spec_helper"
+
 feature 'Attack player' do
   scenario 'Player 1 attacks player 2' do
     sign_in_and_play
