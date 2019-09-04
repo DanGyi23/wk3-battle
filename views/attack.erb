@@ -1,6 +1,14 @@
+<% if @game.current_turn == @game.player_1 %>
 <h1> <%= @game.player_1.name %> attacked <%= @game.player_2.name %> </h1>
+<% else %>
+<h1> <%= @game.player_2.name %> attacked <%= @game.player_1.name %> </h1>
+<% end %>
+
 
 <h2> <%= @game.player_1.name %>: <%= @game.player_1.hp %>HP </h2>
 <h2> <%= @game.player_2.name %>: <%= @game.player_2.hp %>HP </h2>
 
-<h3> <%= @game.current_turn.name %>, it is now your turn </h3>
+
+<form action='/switch-turns' method='post'>
+  <input type='submit' value='OK'>
+</form>
