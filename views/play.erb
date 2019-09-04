@@ -1,11 +1,11 @@
-<% if @player_1.name != '' || @player_2.name != '' %>
-<h1> <%= @player_1.name %> vs. <%= @player_2.name %> </h1>
+<% if @game.player_1.name != '' || @game.player_2.name != '' %>
+<h1> <%= @game.player_1.name %> vs. <%= @game.player_2.name %> </h1>
 <% else %>
 <h1> You must enter both names! </h1>
 <% end %>
 
-<h3> <%= @player_1.name %>: <%= @player_1.hp %>HP </h3>
-<h3> <%= @player_2.name %>: <%= @player_2.hp %>HP </h3>
+<h3> <%= @game.player_1.name %>: <%= @game.player_1.hp %>HP </h3>
+<h3> <%= @game.player_2.name %>: <%= @game.player_2.hp %>HP </h3>
 
 <form action='/attack'>
   <input type='submit' value='Attack'>
