@@ -17,4 +17,11 @@ describe Game do
     end
   end
 
+  describe '#current_turn' do
+    it 'switches the turn after each attack' do
+      game.switch_turn
+      expect(game.current_turn).to eq(player_2)
+    end
+  end
+
 end
